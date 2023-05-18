@@ -1,3 +1,3 @@
-# Get your API key from https://tech.yandex.ru/pdd/doc/concepts/access-docpage/
+# Get your API key from https://yandex.ru/dev/api360/doc/concepts/intro.html
 API_KEY="APIKEY"
 ORG_ID="12345678"

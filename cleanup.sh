@@ -18,10 +18,5 @@ if [ -n "${RECORD_ID}" ]; then
             -H "Authorization: OAuth ${API_KEY}" \
 	 | sed -e "s/{}/success/")
 
-	# RESULT=$(curl -s -X POST "https://pddimp.yandex.ru/api2/admin/dns/del" \
-    #  -H "PddToken: $API_KEY" \
-    #  -d "domain=$DOMAIN&record_id=$RECORD_ID" \
-	#  | python -c "import sys,json;print(json.load(sys.stdin)['success'])")
-	
 	echo $RESULT 
 fi

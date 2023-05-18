@@ -31,4 +31,4 @@ fi
 echo $RECORD_ID > /tmp/CERTBOT_$CERTBOT_DOMAIN/RECORD_ID
 
 # Sleep to make sure the change has time to propagate over to DNS
-#sleep 700
+sleep 700
