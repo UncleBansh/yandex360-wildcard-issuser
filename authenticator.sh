@@ -16,7 +16,7 @@ CREATE_DOMAIN=$(echo _acme-challenge.$CERTBOT_DOMAIN | sed -e "s/.${DOMAIN}//")
 #      -d "domain=$DOMAIN&type=TXT&content=$CERTBOT_VALIDATION&ttl=600&subdomain=$CREATE_DOMAIN" \
 # 	 | python -c "import sys,json;print(json.load(sys.stdin)['record']['record_id'])")
 
-echo $CERTBOT_DOMAIN $DOMAIN  $CREATE_DOMAIN  $ORG_ID $API_KEY
+
 RECORD_ID=$(curl -s -X POST https://api360.yandex.net/directory/v1/org/${ORG_ID}/domains/${DOMAIN}/dns \
             -H "Authorization: OAuth ${API_KEY}" \
             -d "{  name: '${CREATE_DOMAIN}',  text: '${CERTBOT_VALIDATION}',  ttl: '600',  type: 'TXT'}" \
